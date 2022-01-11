@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:ActivityAndProgressDemo"
+             mc:Ignorable="d"
+             x:Class="ActivityAndProgressDemo.Views.MainPage"
+             Title="ActivityIndicator and ProgressBar Demos"
+             Padding="10">
+    <StackLayout>
+        <StackLayout>
+            <ProgressBar x:Name="defaultProgressBar"
+                     WidthRequest="500"
+                     VerticalOptions="CenterAndExpand"
+                     HorizontalOptions="Fill" Scale="2"/>
+            <ProgressBar x:Name="styledProgressBar"
+                     WidthRequest="500"
+                     ProgressColor="Orange"
+                     VerticalOptions="CenterAndExpand"
+                     HorizontalOptions="Fill" Scale="2"/>
+            <Button Text="Click to Progress"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand"
+                Clicked="OnButtonClicked" />
+        </StackLayout>
+        <StackLayout>
+            <Label x:Name="runningStatusLabel"
+               Text="All tasks are completed!"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand" />
+            <ActivityIndicator x:Name="defaultActivityIndicator"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="Fill" Scale="2"/>
+            <ActivityIndicator x:Name="styledActivityIndicator"
+                           Color="Orange"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="Fill" Scale="2"/>
+            <Button Text="Toggle task status"
+                Clicked="OnButtonClicked1"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
